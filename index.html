@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Professional Resume — Product Manager</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="index,follow"/>
+  <style>
+    /* Embedded CSS for Resume Website */
+    body {
+      font-family: 'Inter', 'Poppins', sans-serif;
+      margin: 0;
+      background: #f9fafb;
+      color: #0b2240;
+    }
+    header.header-navigation {
+      background-color: #0b2240;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+    }
+    .brand-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+    }
+    .brand-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 0.5rem;
+    }
+    nav.nav-links a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+    }
+    nav.nav-links a.nav-cta {
+      background-color: #2563eb;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      display: inline-flex;
+      align-items: center;
+    }
+    nav.nav-links a.nav-cta:hover {
+      background-color: #1e40af;
+    }
+    nav.nav-links a.nav-cta .cta-icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 0.5rem;
+    }
+    main.main-content {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section.section-profile {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+    .profile-photo-wrapper {
+      position: relative;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #2563eb;
+    }
+    .profile-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .availability-badge {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: #22c55e;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+    .profile-name {
+      font-size: 2rem;
+      margin: 0;
+      font-weight: 700;
+    }
+    .profile-title {
+      font-weight: 500;
+      color: #6b7280;
+      margin-top: 0.25rem;
+      margin-bottom: 1rem;
+    }
+    .profile-bio {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      color: #374151;
+    }
+    .profile-actions a {
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+    .primary-button {
+      background-color: #2563eb;
+      color: white;
+    }
+    .primary-button:hover {
+      background-color: #1e40af;
+    }
+    .secondary-button {
+      border: 2px solid #0b2240;
+      color: #0b2240;
+    }
+    .secondary-button:hover {
+      background-color: #e0e7ff;
+    }
+    .button-icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 0.5rem;
+    }
+    .profile-meta {
+      display: flex;
+      gap: 2rem;
+      color: #6b7280;
+      font-size: 0.875rem;
+    }
+    .profile-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .meta-icon {
+      width: 16px;
+      height: 16px;
+    }
+    section.section-contact {
+      margin-bottom: 3rem;
+    }
+    .contact-container {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .contact-info-column {
+      flex: 1 1 300px;
+    }
+    .contact-heading {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .contact-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 0.375rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .contact-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      color: #0b2240;
+      margin-bottom: 0.5rem;
+    }
+    .contact-icon {
+      width: 20px;
+      height: 20px;
+    }
+    .contact-value {
+      color: #2563eb;
+      text-decoration: none;
+      word-break: break-word;
+    }
+    .contact-value:hover {
+      text-decoration: underline;
+    }
+    .contact-aside {
+      border: 1px solid #e5e7eb;
+      border-radius: 0.375rem;
+      padding: 1rem;
+      flex: 0 0 250px;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .resume-download, .portfolio-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .download-icon, .globe-icon {
+      width: 20px;
+      height: 20px;
+      color: #0b2240;
+    }
+    .download-link, .portfolio-url {
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: 600;
+    }
+    .download-link:hover, .portfolio-url:hover {
+      text-decoration: underline;
+    }
+    .availability-text {
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+    section.section-experience, section.section-education, section.section-skills, section.section-highlights {
+      margin-bottom: 3rem;
+    }
+    h2.gjs-t-h2 {
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #0b2240;
+    }
+    .experience-timeline, .education-grid, .skills-grid, .highlights-grid {
+      display: grid;
+      gap: 1rem;
+    }
+    .experience-timeline {
+      border-left: 3px solid #2563eb;
+      padding-left: 1rem;
+    }
+    .experience-item {
+      padding-left: 1rem;
+      border-left: 3px solid transparent;
+    }
+    .education-grid {
+      grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    }
+    .education-item, .skill-category-card, .highlight-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 0.375rem;
+      padding: 1rem;
+      background: white;
+    }
+    .education-header {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .education-logo {
+      width: 72px;
+      height: 72px;
+      object-fit: cover;
+      border-radius: 0.375rem;
+    }
+    .degree-row {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      color: #0b2240;
+    }
+    .institution-name {
+      font-size: 0.875rem;
+      color: #6b7280;
+      margin: 0;
+    }
+    .skill-category-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #0b2240;
+    }
+    .skill-icon {
+      width: 20px;
+      height: 20px;
+    }
+    .skill-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .skill-item {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #e5e7eb;
+      padding: 0.5rem 0;
+      font-size: 0.875rem;
+      color: #374151;
+    }
+    .skill-item:first-child {
+      border-top: none;
+    }
+    .skill-level {
+      font-weight: 600;
+      color: #2563eb;
+    }
+    .highlight-card {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .highlight-icon {
+      width: 24px;
+      height: 24px;
+      color: #0b2240;
+    }
+    .highlight-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .highlight-title {
+      font-weight: 700;
+      margin: 0;
+      color: #0b2240;
+    }
+    .highlight-text {
+      margin: 0;
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+    footer.footer {
+      background-color: #0b2240;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.875rem;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .footer-brand-icon {
+      width: 24px;
+      height: 24px;
+    }
+    .footer-links a {
+      margin-left: 1rem;
+      color: white;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    .footer-copy {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .divider {
+      color: white;
+    }
+    .privacy-link, .terms-link {
+      color: white;
+      text-decoration: none;
+    }
+    .privacy-link:hover, .terms-link:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      section.section-profile {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .profile-meta {
+        justify-content: center;
+        gap: 1rem;
+      }
+      .contact-container {
+        flex-direction: column;
+      }
+      .contact-aside {
+        flex: 1 1 auto;
+      }
+      footer.footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+      }
+      .footer-links {
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header class="header-navigation">
+    <div class="nav-container">
+      <a href="#" class="group brand-link">
+        <div class="brand-mark">
+          <img src="https://api.iconify.design/lucide-badge-check.svg?color=%23ffffff" alt="Brand Icon" class="brand-icon"/>
+        </div>
+        <span class="brand-name">Shivam K Avichal</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#profile" class="nav-link">Profile</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-cta">
+          <img src="https://api.iconify.design/lucide-send.svg?color=%23ffffff" alt="" class="cta-icon"/>
+          <span>Contact</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+  <main class="main-content">
+    <section id="profile" class="section-profile">
+      <div class="profile-container">
+        <div class="profile-grid">
+          <div class="profile-photo-wrapper">
+            <img src="https://cdn.grapesjs.com/workspaces/cmj9ygcb40kl0iv9unyvw37d7/assets/f36d0583-f91d-4a97-aa39-a8506d8bdc8a__img.jpg" alt="Professional AI-generated avatar for Product Manager" class="profile-photo"/>
+            <div class="availability-badge"><span class="availability-dot"></span></div>
+          </div>
+          <div class="profile-content">
+            <h1 class="profile-name">Shivam K Avichal</h1>
+            <p class="profile-title">Aspiring Computer Engineer • B.Tech (CVM University)</p>
+            <p class="profile-bio">
+              I am an aspiring computer engineer pursuing my B.Tech degree from The Charotar Vidhya Mandal University, with a solid foundation in C, C++, Python basics, SQL, and Microsoft Excel. I recently completed an SQL Bootcamp and IBM SkillsBuild program, and I leverage strong communication and time management skills, along with native Gujarati and advanced Hindi, to collaborate effectively in diverse teams. I am eager to apply analytical problem-solving and programming capabilities to contribute to technology projects and grow in a challenging IT environment.
+            </p>
+            <div class="profile-actions">
+              <a href="#contact" class="primary-button">
+                <img src="https://api.iconify.design/lucide-mail.svg?color=%23ffffff" alt="" class="button-icon"/>
+                <span>Get in touch</span>
+              </a>
+              <a href="#skills" class="secondary-button">
+                <img src="https://api.iconify.design/lucide-folder-open.svg?color=%230b2240" alt="" class="button-icon"/>
+                <span class="button-label">View skills</span>
+              </a>
+            </div>
+            <div class="profile-meta">
+              <div class="profile-meta-item">
+                <img src="https://api.iconify.design/lucide-map-pin.svg?color=%236b7280" alt="" class="meta-icon"/>
+                <span class="meta-text">Suthar street mandvi Surat</span>
+              </div>
+              <div class="profile-meta-item">
+                <img src="https://api.iconify.design/lucide-briefcase.svg?color=%236b7280" alt="" class="meta-icon"/>
+                <span class="meta-text">Fresher</span>
+              </div>
+              <div class="profile-meta-item">
+                <img src="https://api.iconify.design/lucide-graduation-cap.svg?color=%236b7280" alt="" class="meta-icon"/>
+                <span class="meta-text">B.Tech in Computer Engineering</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="section-contact">
+      <div class="contact-container">
+        <div class="contact-grid">
+          <div class="contact-info-column">
+            <h2 class="contact-heading">Contact</h2>
+            <div class="contact-cards">
+              <div class="contact-card">
+                <div class="contact-card-header">
+                  <img src="https://api.iconify.design/lucide-mail.svg?color=%230b2240" alt="" class="contact-icon"/>
+                  <span class="contact-label">Email</span>
+                </div>
+                <a href="mailto:avichalshiv@gmail.com" class="contact-value">
+                  <span class="contact-text">avichalshiv@gmail.com</span>
+                </a>
+              </div>
+              <div class="contact-card">
+                <div class="contact-card-header">
+                  <img src="https://api.iconify.design/lucide-phone.svg?color=%230b2240" alt="" class="contact-icon"/>
+                  <span class="contact-label">Phone</span>
+                </div>
+                <a href="tel:+918141653006" class="contact-value">
+                  <span class="contact-text">+91 8141653006</span>
+                </a>
+              </div>
+              <div class="contact-card">
+                <div class="contact-card-header">
+                  <img src="https://api.iconify.design/lucide-map-pin.svg?color=%230b2240" alt="" class="contact-icon"/>
+                  <span class="contact-label">Address</span>
+                </div>
+                <div class="contact-value">
+                  <span class="contact-text">Suthar street mandvi Surat</span>
+                </div>
+              </div>
+              <div class="contact-card">
+                <div class="contact-card-header">
+                  <img src="https://api.iconify.design/lucide-linkedin.svg?color=%230b2240" alt="" class="contact-icon"/>
+                  <span class="contact-label">LinkedIn</span>
+                </div>
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener" class="contact-value">
+                  <span class="contact-text">www.linkedin.com/in/shivam-avichal-6059a435</span>
+                  <img src="https://api.iconify.design/lucide-external-link.svg?color=%232563eb" alt="" class="external-icon"/>
+                </a>
+              </div>
+              <div class="contact-card">
+                <div class="contact-card-header">
+                  <img src="https://api.iconify.design/lucide-github.svg?color=%230b2240" alt="" class="contact-icon"/>
+                  <span class="contact-label">GitHub</span>
+                </div>
+                <a href="https://github.com/your-username" target="_blank" rel="noopener" class="contact-value">
+                  <span class="contact-text">github.com/your-username</span>
+                  <img src="https://api.iconify.design/lucide-external-link.svg?color=%232563eb" alt="" class="external-icon"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <aside class="contact-aside">
+            <div class="resume-download">
+              <img src="https://api.iconify.design/lucide-file-down.svg?color=%230b2240" alt="" class="download-icon"/>
+              <a href="#" class="download-link">Download PDF Resume</a>
+            </div>
+            <div class="portfolio-link">
+              <img src="https://api.iconify.design/lucide-globe.svg?color=%230b2240" alt="" class="globe-icon"/>
+              <a href="#" class="portfolio-url">Portfolio Website</a>
+            </div>
+            <div class="availability-note">
+              <p class="availability-text">Currently exploring roles in Product Management, Strategy, and Growth. Open to full-time or advisory engagements.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <section id="experience" class="section-experience">
+      <div class="experience-container">
+        <h2 class="experience-heading">Experience</h2>
+        <div class="experience-timeline">
+          <div class="experience-item">
+            <p class="meta-text">Fresher</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="education" class="section-education">
+      <div class="education-container">
+        <h2 class="education-heading">Education</h2>
+        <div class="education-grid">
+          <div class="education-item">
+            <div class="education-header">
+              <img loading="lazy" src="https://app.grapesjs.com/api/assets/random-image?query=%22university%20campus%22&amp;w=72&amp;h=72" alt="University Logo" class="education-logo"/>
+              <div class="education-texts">
+                <div class="degree-row">
+                  <span class="degree-title">B-Tech in Computer Engineering (in progress)</span>
+                  <span class="education-years">2024 — Present</span>
+                </div>
+                <p class="institution-name">The Charotar Vidhya Mandal (CVM) University • 9/10 CGPA (current)</p>
+              </div>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="education-header">
+              <img loading="lazy" src="https://app.grapesjs.com/api/assets/random-image?query=%22school%20building%22&amp;w=72&amp;h=72" alt="School Logo" class="education-logo"/>
+              <div class="education-texts">
+                <div class="degree-row">
+                  <span class="degree-title">HSC [XII]</span>
+                  <span class="education-years">2024</span>
+                </div>
+                <p class="institution-name">Shree Shantaram Bhat English Medium School • 69.73 percentile</p>
+              </div>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="education-header">
+              <img loading="lazy" src="https://app.grapesjs.com/api/assets/random-image?query=%22secondary%20school%22&amp;w=72&amp;h=72" alt="School Logo" class="education-logo"/>
+              <div class="education-texts">
+                <div class="degree-row">
+                  <span class="degree-title">SSC [X]</span>
+                  <span class="education-years">2022</span>
+                </div>
+                <p class="institution-name">Shree Shantaram Bhat English Medium School • 93.99 percentile</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="section-skills">
+      <div class="skills-container">
+        <h2 class="skills-heading">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <img src="https://api.iconify.design/lucide-cpu.svg?color=%230b2240" alt="" class="skill-icon"/>
+              <span class="skill-category-title">Technical</span>
+            </div>
+            <ul class="skill-list">
+              <li class="skill-item"><span>C Language</span><span class="skill-level">Intermediate</span></li>
+              <li class="skill-item"><span>C++</span><span class="skill-level">Intermediate</span></li>
+              <li class="skill-item"><span>SQL</span><span class="skill-level">Intermediate</span></li>
+              <li class="skill-item"><span>Python Basics</span><span class="skill-level">Beginner</span></li>
+              <li class="skill-item"><span>Excel</span><span class="skill-level">Intermediate</span></li>
+            </ul>
+          </div>
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <img src="https://api.iconify.design/lucide-users.svg?color=%230b2240" alt="" class="skill-icon"/>
+              <span class="skill-category-title">Soft Skills</span>
+            </div>
+            <ul class="skill-list">
+              <li class="skill-item"><span>Time-Management</span><span class="skill-level">Advanced</span></li>
+            </ul>
+          </div>
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <img src="https://api.iconify.design/lucide-target.svg?color=%230b2240" alt="" class="skill-icon"/>
+              <span class="skill-category-title">Product</span>
+            </div>
+            <ul class="skill-list">
+              <li class="skill-item"><span>—</span><span class="skill-level">—</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="languages" class="section-highlights">
+      <div class="highlights-container">
+        <h2 class="highlights-heading">Languages</h2>
+        <div class="highlights-grid">
+          <div class="highlight-card">
+            <img src="https://api.iconify.design/lucide-languages.svg?color=%230b2240" alt="" class="highlight-icon"/>
+            <div class="highlight-content">
+              <p class="highlight-title">English</p>
+              <p class="highlight-text">Intermediate</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <img src="https://api.iconify.design/lucide-languages.svg?color=%230b2240" alt="" class="highlight-icon"/>
+            <div class="highlight-content">
+              <p class="highlight-title">Gujarati</p>
+              <p class="highlight-text">Native</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <img src="https://api.iconify.design/lucide-languages.svg?color=%230b2240" alt="" class="highlight-icon"/>
+            <div class="highlight-content">
+              <p class="highlight-title">Hindi</p>
+              <p class="highlight-text">Advanced</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-brand-mark">
+          <img src="https://api.iconify.design/lucide-badge-check.svg?color=%23ffffff" alt="" class="footer-brand-icon"/>
+        </div>
+      </div>
+      <span class="footer-brand-name">Shivam</span>
+      <div class="footer-links">
+        <a href="#profile" class="footer-link">Profile</a>
+        <a href="#experience" class="footer-link">Experience</a>
+        <a href="#skills" class="footer-link">Skills</a>
+        <a href="#education" class="footer-link">Education</a>
+        <a href="#contact" class="footer-link">Contact</a>
+      </div>
+      <span>© 2025 Shivam k Avichal. All rights reserved.</span>
+      <div class="footer-copy">
+        <span class="divider">•</span>
+        <a href="#" class="privacy-link">Privacy</a>
+        <a href="#" class="terms-link">Terms</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
